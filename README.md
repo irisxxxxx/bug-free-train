@@ -1,36 +1,55 @@
 # bug-free-train
 
-这个仓库用来存放我自己的 Claude Skills（技能）。
+我的 Claude 技能（Skills）仓库：存放已安装技能的原始文件和安装包。
 
-## 什么是 Skill
+## 已安装的技能
 
-Skill 是一个文件夹，里面至少有一个 `SKILL.md` 文件，用来告诉 Claude 在什么时候、按什么步骤完成某类任务。
-Claude 会根据 `SKILL.md` 开头的 `description` 自动判断什么时候使用它。
+### 写作与论文
 
-## 目录结构
+| 技能 | 用途 | 怎么说 |
+|---|---|---|
+| anti-defensive-writing | 论文写作：围绕核心贡献组织叙事，去掉“心虚”的写法 | “帮我改这段摘要 / 引言 / 结论”“回复审稿意见” |
+| humanizer | 去 AI 腔（温和版），尽量保留原意和语气 | “用 humanizer 改一下这段” |
+| stop-slop | 去 AI 腔（严格版），改得更干脆 | “用 stop-slop 改这段” |
+| grill-me | 追问你的计划，逐个问题理清思路 | “grill me，我想写一篇关于……的论文” |
 
-```
-skills/
-└── 技能名称/
-    ├── SKILL.md        # 必需：技能说明
-    ├── scripts/        # 可选：脚本
-    └── references/     # 可选：参考资料
-```
+### 营销与传媒
 
-## SKILL.md 格式
+| 技能 | 用途 | 怎么说 |
+|---|---|---|
+| media-marketing-kit（营销传媒工具箱） | 小红书/抖音内容、文案、短视频、达人合作、公关、品牌案例拆解、竞品与用户研究、营销心理学 | “写一篇小红书笔记”“用营销大师的理论分析××品牌” |
 
-```markdown
----
-name: my-skill
-description: 一句话说明这个技能做什么，以及什么时候应该使用它。
----
+### 演示文稿
 
-# 技能标题
+| 技能 | 用途 | 怎么说 |
+|---|---|---|
+| frontend-slides | 设计感强、带动画的网页版演示（.html，浏览器放映） | “用 frontend-slides 做一个关于××的演示” |
+| pptx（Claude 自带） | 可编辑的 PowerPoint 文件（.pptx） | “帮我做一份 10 页的 PPT” |
 
-这里写给 Claude 的具体步骤和要求。
-```
+### 写代码（不写代码可在技能列表里关掉）
 
-## 安装方法
+| 技能 | 用途 |
+|---|---|
+| ponytail 系列（6 个） | 用最少的代码解决问题、代码审查 |
 
-- **Claude 网页版 / App**：设置 → 功能（Capabilities）→ Skills，把技能文件夹压缩成 `.zip` 后上传。
-- **Claude Code**：把技能文件夹放到项目的 `.claude/skills/` 或个人目录 `~/.claude/skills/` 下。
+## 常用组合
+
+- **写论文**：grill-me 理清研究思路 → anti-defensive-writing 写和改 → humanizer 最后去 AI 腔
+- **课堂汇报**：营销传媒工具箱 做案例分析 → frontend-slides 或 pptx 做演示
+- **发小红书 / 抖音**：营销传媒工具箱 写内容 → stop-slop 或 humanizer 润色
+
+## 文件位置
+
+- `.claude/skills/`：各技能原始文件（在 Claude Code 中打开本仓库时自动可用）
+- `kits/`：整合后的技能源文件（营销传媒工具箱）
+- `zips/`：上传到 Claude 网页版 / App 用的安装包（自定义 → 技能 → + → 创建技能 → 上传技能）
+
+## 来源（均为 MIT 许可）
+
+- ponytail — DietrichGebert/ponytail
+- humanizer — blader/humanizer
+- stop-slop — hardikpandya/stop-slop
+- marketingskills（营销传媒工具箱的来源）— coreyhaines31/marketingskills
+- frontend-slides — zarazhangrui/frontend-slides
+- anti-defensive-writing — Adkid-Zephyr/anti-defensive-writing-Skill（简介已缩短以适配 200 字限制）
+- grill-me — RobMitt/grill-me-skill（无许可文件，未收录在本仓库，仅本地安装）
