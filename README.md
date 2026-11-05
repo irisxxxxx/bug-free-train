@@ -35,7 +35,7 @@
 
 ## 常用组合
 
-- **写论文**：grill-me 理清研究思路 → anti-defensive-writing 写和改 → humanizer 最后去 AI 腔
+- **写论文**：grill-me 理清研究思路 → anti-defensive-writing 写和改 → humanizer-zh 最后去 AI 腔
 - **课堂汇报**：营销传媒工具箱 做案例分析 → frontend-slides 或 pptx 做演示
 - **发小红书 / 抖音**：营销传媒工具箱 写内容 → humanizer-zh 润色
 
