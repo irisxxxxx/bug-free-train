@@ -9,7 +9,8 @@
 | 技能 | 用途 | 怎么说 |
 |---|---|---|
 | anti-defensive-writing | 论文写作：围绕核心贡献组织叙事，去掉“心虚”的写法 | “帮我改这段摘要 / 引言 / 结论”“回复审稿意见” |
-| humanizer | 去 AI 腔（温和版），尽量保留原意和语气 | “用 humanizer 改一下这段” |
+| humanizer-zh | 中文去 AI 腔：去掉空话、套话、模板化表达，保留事实和作者语气 | “用 humanizer-zh 润色这段” |
+| humanizer | 英文去 AI 腔（温和版） | “用 humanizer 改一下这段英文” |
 | stop-slop | 去 AI 腔（严格版），改得更干脆 | “用 stop-slop 改这段” |
 | grill-me | 追问你的计划，逐个问题理清思路 | “grill me，我想写一篇关于……的论文” |
 
@@ -36,7 +37,7 @@
 
 - **写论文**：grill-me 理清研究思路 → anti-defensive-writing 写和改 → humanizer 最后去 AI 腔
 - **课堂汇报**：营销传媒工具箱 做案例分析 → frontend-slides 或 pptx 做演示
-- **发小红书 / 抖音**：营销传媒工具箱 写内容 → stop-slop 或 humanizer 润色
+- **发小红书 / 抖音**：营销传媒工具箱 写内容 → humanizer-zh 润色
 
 ## 文件位置
 
@@ -48,6 +49,7 @@
 
 - ponytail — DietrichGebert/ponytail
 - humanizer — blader/humanizer
+- humanizer-zh — op7418/Humanizer-zh
 - stop-slop — hardikpandya/stop-slop
 - marketingskills（营销传媒工具箱的来源）— coreyhaines31/marketingskills
 - frontend-slides — zarazhangrui/frontend-slides
